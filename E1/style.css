@@ -112,6 +112,11 @@ nav ul {
   border-radius: 5px;
 }
 
+.container-banner-category a,
+.games-card a {
+  color: inherit;
+  display: block;
+}
 
 /* Footer */
 footer {
