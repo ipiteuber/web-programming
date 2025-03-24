@@ -23,16 +23,16 @@ footer {
 @media (max-width: 768px) {
   .square-img img {
       width: 100%; 
-      height: 200px; /* Ajusta el tamaño */
+      height: 200px; /* Ajusta el tamano */
       object-fit: cover; /* Imagen no se deforma */
   }
 
   .text-custom-light {
-      font-size: 15px; /* Reduce el tamaño del texto */
+      font-size: 15px; /* Reduce el tamano del texto */
   }
 
   .gap-3 {
-      gap: 10px; /* Reduce la separación de los elementos */
+      gap: 10px; /* Reduce la separacion de los elementos */
   }
 
   .container {
@@ -44,14 +44,13 @@ footer {
   }
 }
 
-/* 📲 Pantallas extra pequeñas (Menos de 576px) */
 @media (max-width: 576px) {
   .square-img img {
       height: 150px;
   }
 
   .header-container {
-      flex-direction: column; /* Hace que el header se apile */
+      flex-direction: column;
       text-align: center;
   }
 

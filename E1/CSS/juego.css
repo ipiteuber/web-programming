@@ -1,130 +1,82 @@
 body {
-    background-color: #e6dcf2;
-    padding: 0;
-    margin: 0;
-    font-family:  system-ui, -apple-system, 'Segoe UI', Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e6dcf2;
+  font-family:  system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
-  
-  
-  li, ul {list-style-type: none;}/* Quita puntos */
 
-  .icon {text-decoration: none;} /* Quita el subrayado */
+/* Quita puntos y subrayado */
+li, ul, a {
+  list-style-type: none !important;
+  text-decoration: none !important; 
+}
 
-  
-  /* Header */
-  header {background-color: #2a212f;}
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 10px;
-  }
-  
-  nav ul {
-    color: rgb(212, 199, 215);
-    display: flex;
-    gap: 15px;
-    text-decoration: underline;
-  }
-  
-  
-  /* Banner */
-  .banner {
-    position: relative;
-    text-align: center;
-    color: rgb(212, 199, 215);
-  }
-  
-  .banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .banner-text {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    background-color: rgba(0, 0, 0, 0.516);
-    padding: 1px 10px;
-    border-radius: 5px;
+/* Header */
+header {background-color: #2a212f;}
+.text-custom-light {color: rgb(212, 199, 215);}
+
+
+@media (max-width: 768px) {
+  .container-fluid {
+      padding: 0 15px;
   }
 
+  .icons img {
+      width: 35px;
+      height: 35px;
+  }
 
-ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+  .card {
+      width: 90%;
+  }
+
+  .card-img-top {
+      height: 250px;
+      object-fit: cover;
+  }
+
+  .card-body {
+      padding: 15px;
+  }
+
+  .fs-4 {
+      font-size: 18px;
+  }
+
+  .fs-5 {
+      font-size: 14px;
+  }
+
+  .gap-3 {
+      gap: 10px;
+  }
 }
 
-.text-header {
-    cursor: pointer;
-}
+@media (max-width: 576px) {
+  .icons img {
+      width: 30px;
+      height: 30px;
+  }
 
-/* Contenedor del juego */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
+  .card {
+      width: 100%;
+  }
 
-/* Tarjeta del juego */
-.container-game {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    color: black;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
+  .card-img-top {
+      height: 200px;
+  }
 
-/* Imagen del juego */
-.container-image {
-    flex: 1;
-    max-width: 100%;
-    margin-bottom: 8px;
-}
+  .card-body {
+      padding: 10px;
+  }
 
-.image-game {
-    width: 100%;
-    border-radius: 8px;
-}
+  .fs-4 {
+      font-size: 16px;
+  }
 
-/* Texto del juego */
-.game-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 5px;
-    width: 100%;
-}
+  .fs-5 {
+      font-size: 14px;
+  }
 
-.text-game {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 2px;
-    text-align: left;
-}
-
-.game-description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 2px;
-    text-align: left;
-
-}
-
-.game-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #2a212f;
-    text-align: right;
-    margin-right: 15px;
+  .gap-3 {
+      gap: 8px;
+  }
 }
