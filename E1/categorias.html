@@ -10,79 +10,87 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="header-container">
+    <header class="py-2">
+        <nav class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="icons d-flex align-items-center">
                 <a href="index.html">
-                    <i class="icon">
-                        <img src="../E1/images/100790.png" alt="Logo Re:Zero" style="width:40px; height:40px;">
-                    </i>
+                    <img src="./images/categorias.png" alt="Logo" style="width:40px; height:40px;">
                 </a>
-                <ul>
-                    <li class="text-header">Log in</li>
-                    <li class="text-header">Sign up</li>
+                <a href="index.html">
+                    <img src="./images/100790.png" alt="Logo" style="width:40px; height:40px;">
+                </a>
+            </div>
+            <div class="d-flex align-items-center">
+                <ul class="list-unstyled d-flex gap-3 m-0">
+                    <li><a href="#" class="text-custom-light text-decoration-none">Log in</a></li>
+                    <li><a href="#" class="text-custom-light text-decoration-none">Sign up</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="sidebar">
-        <a href="../E1/categorias.html"><h3>Categorias</h3></a>
-        <ul>
-            <li><a href="../E1/fps.html">FPS</a></li>
-            <li><a href="../E1/rpg.html">RPG</a></li>
-            <li><a href="../E1/mmorpg.html">MMORPG</a></li>
-            <li><a href="../E1/survival.html">Survival</a></li>
-            <li><a href="../E1/racing.html">Racing</a></li>
-        </ul>
-    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2 sidebar text-white p-3">
+                <h3 class="text-center mb-4"><a href="../E1/categorias.html" class="text-white text-decoration-none">Categorias</a></h3>
+                <ul class="list-unstyled">
+                    <li><a href="./fps.html" class="text-white p-2 d-block">FPS</a></li>
+                    <li><a href="./rpg.html" class="text-white p-2 d-block">RPG</a></li>
+                    <li><a href="./mmorpg.html" class="text-white p-2 d-block">MMORPG</a></li>
+                    <li><a href="./survival.html" class="text-white p-2 d-block">Survival</a></li>
+                    <li><a href="./racing.html" class="text-white p-2 d-block">Racing</a></li>
+                </ul>
+            </aside>
 
-    <section class="content">
-        <div class="banner">
-            <img class="banner" src="../E1/images/Banner.jpg"alt="banner"  style="width:100%; opacity:0.7;">
-            <p class="banner-text">Categorias</p>
+            <main class="col-md-9 col-lg-10 col-6 content">
+                <section class="position-relative text-center">
+                    <img src="./images/Banner.jpg" alt="Categorias" class="img-fluid opacity-75">
+                    <h1 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-80">
+                        Categorias
+                    </h1>
+                </section> 
+
+                <section class="container bg-light rounded-3 p-4 my-4">
+                    <div class="col-12 col-md-12 mx-auto text-center mb-4">
+                        <a href="./fps.html" class="d-block position-relative">
+                            <img class="img-fluid rounded opacity-75 w-100" style="max-height: 350px; object-fit: cover;" src="./images/FPS.jpg" alt="FPS">
+                            <h5 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-75">FPS</h5>
+                        </a>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <a href="./rpg.html" class="d-block position-relative square-img">
+                                <img class="img-fluid rounded opacity-75" src="./images/RPG.jpg" alt="RPG">
+                                <h5 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-75">RPG</h5>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <a href="./mmorpg.html" class="d-block position-relative square-img">
+                                <img class="img-fluid rounded opacity-75" src="./images/MMORPG.jpg" alt="MMORPG">
+                                <h5 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-75">MMORPG</h5>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <a href="./survival.html" class="d-block position-relative square-img">
+                                <img class="img-fluid rounded opacity-75" src="./images/Survival.jpg" alt="Survival">
+                                <h5 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-75">Survival</h5>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <a href="./racing.html" class="d-block position-relative square-img">
+                                <img class="img-fluid rounded opacity-75" src="./images/Racing.jpg" alt="Racing">
+                                <h5 class="position-absolute top-50 start-50 translate-middle bg-dark text-light px-3 py-1 rounded opacity-75">Racing</h5>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
+    </div>
 
-        <section class="games-category">
-            <div class="container-category">
-                <div class="container-banner-category">
-                    <a href="./fps.html">
-                        <img class="blur" src="../E1/images/FPS.jpg" alt="FPS" style="width:100%; opacity:0.84;">
-                        <h5 class="fps">FPS</h5>
-                    </a>
-                </div>
-                <div class="container-games">
-                    <div class="games-card">
-                        <a href="./rpg.html">
-                            <img class="blur" src="../E1/images/RPG.jpg" alt="RPG" style="width:25%; opacity: 0.75;">
-                            <h5 class="cards">RPG</h5>
-                        </a>
-                    </div>
-                    <div class="games-card">
-                        <a href="./mmorpg.html">
-                            <img class="blur" src="../E1/images/MMORPG.jpg" alt="MMORPG" style="width:25%; opacity: 0.75;">
-                            <h5 class="cards">MMORPG</h5>
-                        </a>
-                    </div>
-                    <div class="games-card">
-                        <a href="./survival.html">
-                            <img class="blur" src="../E1/images/Survival.jpg" alt="Survival" style="width:25%; opacity: 0.75;">
-                            <h5 class="cards">Survival</h5>
-                        </a>
-                    </div>
-                    <div class="games-card">
-                        <a href="./racing.html">
-                            <img class="blur" src="../E1/images/Racing.jpg" alt="Racing" style="width:25%; opacity: 0.75;">
-                            <h5 class="cards">Racing</h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <footer>
-        <p>17 de marzo de 2025</p>
+    <footer class="text-black text-center py-3 mt-4">
+        <p class="mb-0">17 de marzo de 2025</p>
     </footer>
 </body>
 </html>

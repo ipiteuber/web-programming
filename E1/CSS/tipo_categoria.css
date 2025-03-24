@@ -1,78 +1,50 @@
 body {
     background-color: #e6dcf2;
-    padding: 0;
-    margin: 0;
-    font-family:  system-ui, -apple-system, 'Segoe UI', Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-  
-/* Quita puntos */
-li, ul {list-style-type: none;}
-  
-  
-/* Header */
-header {background-color: #2a212f;}
-  
-.header-container {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 25px;
-}
+    flex-direction: column;
+    min-height: 100vh;
+  }
   
-nav ul {
-    color: rgb(212, 199, 215);
-    display: flex;
-    gap: 15px;
-    text-decoration: underline;
-}
-
-
-/* Sidebar*/
-.sidebar {
+  /* Quita puntos y subrayado */
+  li, ul, a {
+    list-style-type: none !important;
+    text-decoration: none !important; 
+  }
+  
+  /* Header */
+  header {background-color: #2a212f;}
+  .text-custom-light {color: rgb(212, 199, 215);}
+  
+  /* Footer */
+  footer {
+    background-color: rgb(137, 117, 142);
+    margin-top: auto;
+  }
+  
+  /* Sidebar */
+  .sidebar {
     background-color: #2a212fe1;
-    color: white;
-    width: 150px;
-    height: 100vh;
-    position: fixed;
-    padding: 15px;
-    padding-top: 2px;
-    font-size: 14px;
-}
-.sidebar h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 18px;
-    text-decoration: underline;
-}
-
-.sidebar ul {
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 8px;
-}
-
-/* Banner*/
-
-.banner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Banner */
+  .banner {
     position: relative;
     text-align: center;
     color: rgb(212, 199, 215);
     padding-bottom: 10px;
   }
   
-.banner img {
+  .banner img {
     width: 100%;
     height: auto;
     display: block;
-}
+  }
   
-.banner-text {
+  .banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,78 +53,121 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.516);
     padding: 1px 25%;
     border-radius: 5px;
-}
-
-/* Contenido */
-.content {
-    margin-left: 220px;
+  }
+  
+  /* Contenido */
+  .content {
     padding: 20px;
+  }
+  
+  .games-container {
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
-}
-
-.container-game {
+  }
+  
+  .container-game {
     display: flex;
-    align-content: center;
     align-items: center;
     background: white;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 15px;
-    width: 400px;
+    width: 100%;
+    max-width: 600px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-}
-
-
-/* Imagen del juego */
-.container-image {
+  }
+  
+  /* Imagen del juego */
+  .container-image {
     flex: 1;
     max-width: 150px;
-}
-
-.image-game {
+  }
+  
+  .image-game {
     width: 100%;
     border-radius: 8px;
-}
-
-/* Texto del juego */
-.text-game {
+  }
+  
+  /* Texto del juego */
+  .text-game {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
     color: inherit;
-    text-decoration: none;
-}
-
-/* Contenido de la tarjeta */
-.game-info {
+  }
+  
+  /* Contenido de la tarjeta */
+  .game-info {
     flex: 2;
     padding-left: 15px;
-}
-
-.game-description {
+  }
+  
+  .game-description {
     font-size: 14px;
     color: #555;
     margin-bottom: 8px;
-}
-
-.game-price {
+  }
+  
+  .game-price {
     font-size: 16px;
     font-weight: bold;
     color: #2a212f;
-}
-
-/* Footer */
-footer {
-    background-color: rgb(137, 117, 142);
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   }
   
+  /* Media Queries */
+  @media (min-width: 992px) {
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: calc(100vh - 73px - 56px); /* Altura total - header - footer */
+      overflow-y: auto;
+    }
+  }
   
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+      position: relative;
+      height: auto;
+    }
+    
+    .sidebar ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 0;
+    }
+    
+    .sidebar li {
+      flex: 0 0 auto;
+    }
+    
+    .sidebar a {
+      padding: 8px 12px !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sidebar ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .container-game {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .container-image {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .game-info {
+      padding-left: 0;
+    }
+  }
